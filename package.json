@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "discord.js": "^14.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.20.0"
+  },
+  "name": "chattleroyale",
+  "version": "1.0.0",
+  "description": "Discord battle royale bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marco Arriaga",
+  "license": "ISC"
+}
