@@ -1,0 +1,24 @@
+Design and Structure
+---------------------
+
+- User is going to initialize a game in a specific channel, then everyone who participates will be given a role
+- When you're given that role, you're allowed to send messages in that channel
+- When you get knocked out/eliminated, you're given a loser role and not allowed to send messages anymore
+- Last one standing wins (obviously), announcement is made and everything gets reset again until the game gets started
+- By default, the channel won't be able to be messaged in
+- You can start a game in any channel that you want but there is only one "game" channel
+- (nice to have) implement a leaderboard for the game
+- when you start the game you give it a time for people to join (default should be like, a minute) and a time between rules
+
+=======
+actual functionality
+
+- rules are going to be implemented as json objects with range for randomness
+- every time period a random rule will be picked from the json list and added to a list of functions through a creator
+- every rule needs to fit that json structure (find a way to automate/ensure this?)
+- then the function that creates the rule will make sure that they only return true or false
+- every message will then be run through all of the functions in that list to determine if they break the rule or not
+
+
+I don't really know how I'm going to structure rules that could conflict each other... maybe have a check or something?
+Some sort of dependency or something like that? idk yet

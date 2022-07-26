@@ -1,0 +1,5 @@
+- none of a certain letter
+- you need to have a certain letter
+- message needs to contain a word from the last sent message
+- you need to send a message within a certain time period
+- you can't send a message faster than a certain time period
