@@ -19,6 +19,7 @@ actual functionality
 - then the function that creates the rule will make sure that they only return true or false
 - every message will then be run through all of the functions in that list to determine if they break the rule or not
 
+it actually might be easier to just make the rules individual files, then have an interface that the rules need to meet
 
 I don't really know how I'm going to structure rules that could conflict each other... maybe have a check or something?
 Some sort of dependency or something like that? idk yet
