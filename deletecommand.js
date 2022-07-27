@@ -9,11 +9,9 @@ let guildId;
 
 // I'm going to abstract this so I don't have to reuse this all the time
 function getArg(num, name) {
-	if (num >= process.argv.length) throw `Error: argument ${num} ${name} not provided.`;
+	if (num >= process.argv.length) throw `Error: argument ${num} ${name} not provided. Use: deletecommands.js (gu|gl) <commandId> (guildId)`;
 	return process.argv[num];
 }
-
-// flag | commandId | guildId (optional)
 
 const commandScope = getArg(2, 'commandScope');
 if (commandScope.toLowerCase === 'gu') {

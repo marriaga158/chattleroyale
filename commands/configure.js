@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
+const serverconfigs = require('../serverconfigs.json');
 
 /*
 TODO:
@@ -14,6 +15,18 @@ module.exports = {
 		.setName('configure')
 		.setDescription('Configures the settings for Chattle Royale'),
 	async execute(interaction) {
-		await interaction.reply('Unimplemented...');
+		// First step is to check if the config already exists and prompt to reset
+		console.log(interaction);
+		if (!interaction.memberPermissions.has('ADMINISTRATOR')) {
+			// reply that you gotta be an admin
+			await interaction.reply({
+				content: 'This command can only be run by a server administrator!',
+				ephemeral: true,
+			});
+		}
+		if (serverconfigs[interaction.guild.id]) {
+			// say that it already exists and prompt them to run setup again
+		}
+		await interaction.reply('verified admin successfully');
 	},
 };
